@@ -1,0 +1,28 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Debug Demo</title>
+</head>
+<body>
+<form name="f">
+    Số đầu tiên:<br/>
+    <input name="a" type="text"/><br/>
+    Số thứ hai: <br/>
+    <input name="b" type="text"/><br/>
+    <div id="resultDiv"></div>
+    <input type="button" value="Tính tích" onclick="product()"/>
+</form>
+<script>
+    // function products(){  sai chữ "products" trên là "product"
+    function product(){
+        var a = parseInt(document.forms['f']['a'].value);
+        <!-- var b = parseInt(document.forms['f']['c'].value) "b"  ko phải "c"    ;-->
+        var b = parseInt(document.forms['f']['b'].value);
+        var result = a * b;
+        <!--        document.getElementByIds("resultDiv").innerHTML = "Kết quả: " + result;  ById  k phải ByIDs     -->
+        document.getElementById("resultDiv").innerHTML = "Kết quả: " + result;
+    }
+</script>
+</body>
+<html>
+
